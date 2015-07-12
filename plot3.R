@@ -11,9 +11,11 @@ plot3 <- function(){
         ## Get the plotting data by calling a function from the utilities file
         powerData <- getPlottingData()
         
+        ## Create a line plot for the three sets of sub mettering data (1, 2 and 3)
         png(filename = "plot3.png", width = 480, height = 480, units = "px")
         with(powerData, {
-                plot(DateTime, Sub_metering_1, type="n", xlab="", ylab="Energy sub metering",
+                plot(DateTime, Sub_metering_1, type="n", 
+                     xlab="", ylab="Energy sub metering",
                      width = 480, height = 480, units = "px")
                 lines(DateTime, Sub_metering_1, type="l", col=1)
                 lines(DateTime, Sub_metering_2, type="l", col=2)

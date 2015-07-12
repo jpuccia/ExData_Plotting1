@@ -11,7 +11,7 @@ plot1 <- function(){
         ## Get the plotting data by calling a function from the utilities file
         powerData <- getPlottingData()
         
-        ## Plot the histogram to the screen device first
+        ## Plot the histogram for Global_active_power
         png(filename = "plot1.png", width = 480, height = 480, units = "px")
         hist(powerData$Global_active_power, 
              xlab="Global Active Power (kilowatts)", 
